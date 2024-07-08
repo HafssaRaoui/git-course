@@ -8,7 +8,7 @@
 git clone https/ssh url 
 ```
 
-effectuer des changements , executer ensuite
+effectuer des changements , naviguer au repo ,executer ensuite
 
 ```
 git status
@@ -44,4 +44,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 
-
+# Workflow 2
