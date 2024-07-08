@@ -45,3 +45,36 @@ ssh-add ~/.ssh/id_ed25519
 ```
 
 # Workflow 2
+
+1- je commence par créer mon repo sur ma machine locale  
+2- executer la commande ls-la ; qu'est ce qu'on remarque  
+3-ce n'est pas un git repo  
+```
+git init
+```
+4- qd on execute 
+```
+git status
+```
+on remarque que les fichiers sont untracked , il faut les stager donc on execute
+```
+git add .
+```
+
+5-faire commit  
+6- si on essaie push ça marche pas , car git ne sait où il doit faire le push    
+Donc il faut revenir créer un remote repo dans gitHub et le connecter au repo local sur ma machine
+7-puis Faire le push en spécifiant cette fois la référence càd le ssh url de notre remote repo  
+```
+git remote add origin ssh url
+```
+8- pour voir les repo remote connectés à celui local :  
+```
+git remote -v
+```
+9-finalemnt faire le push  
+
+```
+git push --set-upstream origin master
+```
+
