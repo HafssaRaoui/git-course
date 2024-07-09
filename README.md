@@ -72,9 +72,11 @@ git remote add origin ssh url
 ```
 git remote -v
 ```
-9-finalemnt faire le push  
+9-finalement faire le push  
 
 ```
 git push --set-upstream origin master
 ```
+ # Branching
+ Default Branch == Master/Main/Dev
 
