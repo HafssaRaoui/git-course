@@ -78,5 +78,59 @@ git remote -v
 git push --set-upstream origin master
 ```
  # Branching
- Default Branch == Master/Main/Dev
+ Default Branch == Master/Main/Dev    
+ On peut éventuellemnt créer d'autre branches avant de merger == feature branch 
 
+ 
+ 1- pour faire apparaitre les branches de mon repo  
+ 
+```
+git branch
+```
+
+2-Pour créer une nouvelle branche  
+
+```
+git checkout -n branch-name
+```
+3- Pour switch entre les branches  
+
+```
+git checkout target-branch
+```
+ 4-par exemple je vais créer une branche qui va contenir des modifications sur mon README.md  
+ 
+```
+git branch -b feature-readme-instructions
+```
+
+ 5-maintenant j'effectue des changements sur ma feature branch , je fais add puis commit puis   
+ 
+```
+git push --set-upstream feature-readme-instructions
+```
+
+6-On regarde sur gitHub == LA Branche est bien rajoutée  
+
+## pull request 
+
+> it's a request to have your code pulled to another branch
+Par exemple ici on va puller de feature au master branch
+
+
+<br>
+Géneralement lorqu'on fait un pull request c'est pour que le code soit révisé et confirmé   
+Une fois le code est mergé au mastee , il faut nettoyé cette feature branch càd la suprimmer  
+
+```
+git branch -d name
+```
+
+On remarque que c'est changement n'apparaissent que sur GitHub et non sur l'editeur   , faire alors un pull
+```
+git pull origin master
+```
+
+## Merging Conflicts 
+
+C'est qd deux personnes par exemple modifient les memes parties du code sur deux branches différentes et procédent pour merger dans la branche master == overwritten files
